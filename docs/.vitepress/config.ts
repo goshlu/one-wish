@@ -15,7 +15,7 @@ export default defineConfig({
   cleanUrls: true,
 
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo1.svg' }],
     ['meta', { name: 'theme-color', content: '#409eff' }],
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:locale', content: 'zh-CN' }],
@@ -23,7 +23,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: '/logo.svg',
+    logo: '/logo1.svg',
 
     nav: [
       { text: '指南', link: '/guide/introduction' },
@@ -35,7 +35,7 @@ export default defineConfig({
           { text: '更新日志', link: '/changelog' },
           {
             text: 'GitHub',
-            link: 'https://github.com/wish/one-wish',
+            link: 'https://github.com/goshlu/one-wish',
           },
         ],
       },
@@ -111,7 +111,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/wish/one-wish',
+        link: 'https://github.com/goshlu/one-wish',
       },
     ],
 

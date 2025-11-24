@@ -6,7 +6,7 @@ hero:
   text: 现代化组件库
   tagline: 基于 Vue 3 + TypeScript + Vite 构建的简洁、高效的 UI 组件库
   image:
-    src: /logo.svg
+    src: /logo1.svg
     alt: One Wish
   actions:
     - theme: brand
