@@ -111,8 +111,12 @@ const selectColor = (color: string) => {
 }
 
 // 简单的 click-outside 指令
+interface HTMLElementWithClickOutside extends HTMLElement {
+  _clickOutside?: (event: MouseEvent) => void
+}
+
 const vClickOutside = {
-  mounted(el: HTMLElement, binding: any) {
+  mounted(el: HTMLElementWithClickOutside, binding: any) {
     el._clickOutside = (event: MouseEvent) => {
       if (!(el === event.target || el.contains(event.target as Node))) {
         binding.value()
@@ -120,8 +124,11 @@ const vClickOutside = {
     }
     document.addEventListener('click', el._clickOutside)
   },
-  unmounted(el: HTMLElement) {
-    document.removeEventListener('click', el._clickOutside)
+  unmounted(el: HTMLElementWithClickOutside) {
+    if (el._clickOutside) {
+      document.removeEventListener('click', el._clickOutside)
+      delete el._clickOutside
+    }
   }
 }
 </script>
