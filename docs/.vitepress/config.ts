@@ -55,6 +55,7 @@ export default defineConfig({
         {
           text: '进阶',
           items: [
+            { text: '自动按需导入', link: '/guide/auto-import' },
             { text: '主题定制', link: '/guide/theme' },
             { text: 'TypeScript', link: '/guide/typescript' },
           ],
