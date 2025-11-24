@@ -1,6 +1,6 @@
 {
   "name": "one-wish",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "One Wish - 一个基于 Vue 3 + TypeScript + Vite 构建的现代化组件库",
   "type": "module",
   "main": "./dist/one-wish.umd.js",
