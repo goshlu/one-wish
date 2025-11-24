@@ -35,6 +35,7 @@ provide('checkboxGroup', {
 .my-checkbox-group {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 16px;
+  font-size: 0;
 }
 </style>

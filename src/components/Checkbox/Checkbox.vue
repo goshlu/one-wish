@@ -66,13 +66,24 @@ const handleChange = (e: Event) => {
   align-items: center;
   cursor: pointer;
   user-select: none;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.88);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.my-checkbox:hover .my-checkbox__inner {
+  border-color: #1677ff;
 }
 
 .my-checkbox__input {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 16px;
   height: 16px;
+  flex-shrink: 0;
 }
 
 .my-checkbox__input input {
@@ -80,59 +91,92 @@ const handleChange = (e: Event) => {
   opacity: 0;
   width: 0;
   height: 0;
+  margin: 0;
 }
 
 .my-checkbox__inner {
   display: inline-block;
+  position: relative;
   width: 16px;
   height: 16px;
-  border: 1px solid var(--border-color-base);
+  border: 1px solid #d9d9d9;
   border-radius: 2px;
-  background-color: #fff;
-  transition: var(--transition-base);
+  background-color: #ffffff;
+  transition: all 0.3s;
+  box-sizing: border-box;
 }
 
 .my-checkbox__inner::after {
   content: '';
   position: absolute;
-  left: 5px;
-  top: 2px;
-  width: 4px;
-  height: 8px;
+  left: 21.5%;
+  top: 50%;
+  width: 5.71428571px;
+  height: 9.14285714px;
   border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
-  transform: rotate(45deg) scale(0);
-  transition: var(--transition-base);
+  transform: rotate(45deg) scale(0) translate(-50%, -50%);
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  opacity: 0;
 }
 
 .my-checkbox.is-checked .my-checkbox__inner {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  background-color: #1677ff;
+  border-color: #1677ff;
 }
 
 .my-checkbox.is-checked .my-checkbox__inner::after {
-  transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1) translate(-50%, -50%);
+  opacity: 1;
+}
+
+.my-checkbox.is-indeterminate .my-checkbox__inner {
+  background-color: #1677ff;
+  border-color: #1677ff;
 }
 
 .my-checkbox.is-indeterminate .my-checkbox__inner::after {
   content: '';
-  left: 3px;
-  top: 6px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
   width: 8px;
-  height: 2px;
+  height: 8px;
   border: none;
   background-color: #fff;
-  transform: scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  border-radius: 0;
 }
 
 .my-checkbox.is-disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+}
+
+.my-checkbox.is-disabled .my-checkbox__inner {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+
+.my-checkbox.is-disabled.is-checked .my-checkbox__inner {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: #d9d9d9;
+}
+
+.my-checkbox.is-disabled.is-checked .my-checkbox__inner::after {
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.my-checkbox.is-disabled .my-checkbox__label {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
 }
 
 .my-checkbox__label {
   margin-left: 8px;
-  font-size: var(--font-size-base);
+  font-size: 14px;
+  line-height: 1;
 }
 </style>

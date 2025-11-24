@@ -4,11 +4,84 @@
 
 ## 基础用法
 
-<demo src="../demos/color-picker/basic.vue"></demo>
+<DemoBlock>
+  <div>
+    <my-color-picker v-model="color" />
+    <p>当前颜色: {{ color }}</p>
+  </div>
+
+  <template #code>
+
+  ```vue
+  <template>
+    <div>
+      <my-color-picker v-model="color" />
+      <p>当前颜色: {{ color }}</p>
+    </div>
+  </template>
+
+  <script setup lang="ts">
+  import { ref } from 'vue'
+
+  const color = ref('#409eff')
+  </script>
+  ```
+
+  </template>
+</DemoBlock>
 
 ## 预定义颜色
 
-<demo src="../demos/color-picker/predefine.vue"></demo>
+<DemoBlock>
+  <div>
+    <my-color-picker v-model="color2" :predefine-colors="predefineColors" />
+    <p>当前颜色: {{ color2 }}</p>
+  </div>
+
+  <template #code>
+
+  ```vue
+  <template>
+    <div>
+      <my-color-picker v-model="color" :predefine-colors="predefineColors" />
+      <p>当前颜色: {{ color }}</p>
+    </div>
+  </template>
+
+  <script setup lang="ts">
+  import { ref } from 'vue'
+
+  const color = ref('#409eff')
+  const predefineColors = [
+    '#ff4500',
+    '#ff8c00',
+    '#ffd700',
+    '#90ee90',
+    '#00ced1',
+    '#1e90ff',
+    '#c71585',
+  ]
+  </script>
+  ```
+
+  </template>
+</DemoBlock>
+
+<script setup>
+import { ref } from 'vue'
+
+const color = ref('#409eff')
+const color2 = ref('#409eff')
+const predefineColors = [
+  '#ff4500',
+  '#ff8c00',
+  '#ffd700',
+  '#90ee90',
+  '#00ced1',
+  '#1e90ff',
+  '#c71585',
+]
+</script>
 
 ## API
 
@@ -27,3 +100,12 @@
 | --- | --- | --- |
 | update:modelValue | 值改变时触发 | (value: string) |
 | change | 颜色改变时触发 | (value: string) |
+
+## TypeScript
+
+```typescript
+import type {
+  ColorPickerProps,
+  ColorPickerEmits,
+} from 'one-wish'
+```

@@ -4,11 +4,158 @@
 
 ## 基础用法
 
-<demo src="../demos/cascader/basic.vue"></demo>
+<DemoBlock>
+  <div>
+    <my-cascader v-model="value" :options="options" />
+    <p>选中值: {{ value }}</p>
+  </div>
+
+  <template #code>
+
+  ```vue
+  <template>
+    <div>
+      <my-cascader v-model="value" :options="options" />
+      <p>选中值: {{ value }}</p>
+    </div>
+  </template>
+
+  <script setup lang="ts">
+  import { ref } from 'vue'
+
+  const value = ref([])
+  const options = [
+    {
+      value: 'zhejiang',
+      label: '浙江',
+      children: [
+        {
+          value: 'hangzhou',
+          label: '杭州',
+          children: [
+            { value: 'xihu', label: '西湖' },
+            { value: 'binjiang', label: '滨江' },
+          ],
+        },
+        {
+          value: 'ningbo',
+          label: '宁波',
+          children: [
+            { value: 'haishu', label: '海曙' },
+            { value: 'jiangbei', label: '江北' },
+          ],
+        },
+      ],
+    },
+    {
+      value: 'jiangsu',
+      label: '江苏',
+      children: [
+        {
+          value: 'nanjing',
+          label: '南京',
+          children: [
+            { value: 'xuanwu', label: '玄武' },
+            { value: 'qinhuai', label: '秦淮' },
+          ],
+        },
+      ],
+    },
+  ]
+  </script>
+  ```
+
+  </template>
+</DemoBlock>
 
 ## 可清空
 
-<demo src="../demos/cascader/clearable.vue"></demo>
+<DemoBlock>
+  <div>
+    <my-cascader v-model="value2" :options="options" clearable />
+    <p>选中值: {{ value2 }}</p>
+  </div>
+
+  <template #code>
+
+  ```vue
+  <template>
+    <div>
+      <my-cascader v-model="value" :options="options" clearable />
+      <p>选中值: {{ value }}</p>
+    </div>
+  </template>
+
+  <script setup lang="ts">
+  import { ref } from 'vue'
+
+  const value = ref(['zhejiang', 'hangzhou', 'xihu'])
+  const options = [
+    {
+      value: 'zhejiang',
+      label: '浙江',
+      children: [
+        {
+          value: 'hangzhou',
+          label: '杭州',
+          children: [
+            { value: 'xihu', label: '西湖' },
+            { value: 'binjiang', label: '滨江' },
+          ],
+        },
+      ],
+    },
+  ]
+  </script>
+  ```
+
+  </template>
+</DemoBlock>
+
+<script setup>
+import { ref } from 'vue'
+
+const value = ref([])
+const value2 = ref(['zhejiang', 'hangzhou', 'xihu'])
+const options = [
+  {
+    value: 'zhejiang',
+    label: '浙江',
+    children: [
+      {
+        value: 'hangzhou',
+        label: '杭州',
+        children: [
+          { value: 'xihu', label: '西湖' },
+          { value: 'binjiang', label: '滨江' },
+        ],
+      },
+      {
+        value: 'ningbo',
+        label: '宁波',
+        children: [
+          { value: 'haishu', label: '海曙' },
+          { value: 'jiangbei', label: '江北' },
+        ],
+      },
+    ],
+  },
+  {
+    value: 'jiangsu',
+    label: '江苏',
+    children: [
+      {
+        value: 'nanjing',
+        label: '南京',
+        children: [
+          { value: 'xuanwu', label: '玄武' },
+          { value: 'qinhuai', label: '秦淮' },
+        ],
+      },
+    ],
+  },
+]
+</script>
 
 ## API
 
@@ -33,9 +180,19 @@
 
 ```ts
 interface CascaderOption {
-  value: string | number
-  label: string
-  children?: CascaderOption[]
-  disabled?: boolean
+  value: string | number      // 选项的值
+  label: string               // 选项的标签
+  children?: CascaderOption[] // 子选项
+  disabled?: boolean          // 是否禁用
 }
+```
+
+## TypeScript
+
+```typescript
+import type {
+  CascaderProps,
+  CascaderEmits,
+  CascaderOption,
+} from 'one-wish'
 ```

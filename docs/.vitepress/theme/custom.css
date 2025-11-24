@@ -73,17 +73,17 @@
 
 /* 增加内容宽度 */
 :root {
-  --vp-layout-max-width: 1800px;
+  --vp-layout-max-width: 1600px;
 }
 
 .VPDoc.has-sidebar .content-container {
-  max-width: 1800px !important;
+  max-width: 1600px !important;
 }
 
 .VPDoc .container,
 .VPDoc .content-container,
 .VPContent .container {
-  max-width: 1800px !important;
+  max-width: 1600px !important;
 }
 
 .vp-doc {
@@ -97,7 +97,7 @@
 }
 
 .VPDoc .content {
-  max-width: 1800px !important;
+  max-width: 1600px !important;
   margin: 0 auto;
 }
 

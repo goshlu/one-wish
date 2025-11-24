@@ -105,32 +105,51 @@ const handleClear = () => {
   position: relative;
   display: inline-block;
   width: 100%;
+  font-size: 14px;
 }
 
 .my-cascader__input {
   position: relative;
-  padding: 8px 30px 8px 12px;
-  border: 1px solid var(--border-color-base);
-  border-radius: var(--border-radius-base);
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 4px 30px 4px 11px;
+  font-size: 14px;
+  line-height: 1.5715;
+  color: rgba(0, 0, 0, 0.88);
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
   cursor: pointer;
-  transition: var(--transition-base);
+  transition: all 0.2s;
+  box-sizing: border-box;
 }
 
 .my-cascader__input:hover {
-  border-color: var(--primary-color);
+  border-color: #4096ff;
+}
+
+.my-cascader__label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.88);
 }
 
 .my-cascader__placeholder {
-  color: var(--text-placeholder);
+  color: rgba(0, 0, 0, 0.25);
 }
 
 .my-cascader__arrow {
   position: absolute;
-  right: 12px;
+  right: 11px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 12px;
-  color: var(--text-placeholder);
+  color: rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s;
+  pointer-events: none;
 }
 
 .my-cascader__clear {
@@ -138,20 +157,35 @@ const handleClear = () => {
   right: 30px;
   top: 50%;
   transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
   cursor: pointer;
-  color: var(--text-placeholder);
-  font-size: 18px;
+  color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.06);
+  border-radius: 50%;
+  transition: all 0.2s;
+  z-index: 1;
+}
+
+.my-cascader__clear:hover {
+  color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.12);
 }
 
 .my-cascader__dropdown {
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
-  background: #fff;
-  border: 1px solid var(--border-color-base);
-  border-radius: var(--border-radius-base);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+              0 3px 6px -4px rgba(0, 0, 0, 0.12),
+              0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  z-index: 2000;
+  overflow: hidden;
 }
 
 .my-cascader__menus {
@@ -159,41 +193,70 @@ const handleClear = () => {
 }
 
 .my-cascader__menu {
-  min-width: 150px;
-  max-height: 200px;
+  min-width: 160px;
+  max-height: 256px;
   overflow-y: auto;
-  border-right: 1px solid var(--border-color-base);
+  border-right: 1px solid rgba(5, 5, 5, 0.06);
+  padding: 4px 0;
 }
 
 .my-cascader__menu:last-child {
   border-right: none;
 }
 
+.my-cascader__menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.my-cascader__menu::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.my-cascader__menu::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 .my-cascader__option {
   position: relative;
-  padding: 8px 24px 8px 12px;
+  display: flex;
+  align-items: center;
+  padding: 5px 32px 5px 12px;
+  min-height: 32px;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.88);
   cursor: pointer;
-  transition: var(--transition-base);
+  transition: background-color 0.2s;
+  white-space: nowrap;
 }
 
 .my-cascader__option:hover {
-  background-color: var(--bg-color-light);
+  background-color: rgba(0, 0, 0, 0.04);
 }
 
 .my-cascader__option.is-active {
-  color: var(--primary-color);
+  color: #1677ff;
   font-weight: 600;
+  background-color: #e6f4ff;
 }
 
 .my-cascader__option.is-disabled {
-  color: var(--text-disabled);
+  color: rgba(0, 0, 0, 0.25);
   cursor: not-allowed;
+  background-color: transparent;
+}
+
+.my-cascader__option.is-disabled:hover {
+  background-color: transparent;
 }
 
 .my-cascader__expand {
   position: absolute;
-  right: 8px;
+  right: 12px;
   top: 50%;
   transform: translateY(-50%);
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.45);
 }
 </style>

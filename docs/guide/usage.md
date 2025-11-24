@@ -76,6 +76,21 @@ import 'one-wish/style.css'
 - **Icon** - 图标组件
 - **Divider** - 分割线组件
 
+### 表单组件
+
+- **AutoComplete** - 自动完成组件
+- **Cascader** - 级联选择器
+- **Checkbox** - 多选框组件
+- **ColorPicker** - 颜色选择器
+
+### 布局组件
+
+- **Flex** - 弹性布局
+- **Grid** - 栅格布局
+- **Layout** - 布局容器
+- **Space** - 间距组件
+- **Splitter** - 分隔面板
+
 ### 其他组件
 
 - **FloatButton** - 悬浮按钮组件
@@ -176,6 +191,109 @@ import 'one-wish/style.css'
 </template>
 ```
 
+### AutoComplete 自动完成
+
+```vue
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const value = ref('')
+const options = [
+  { value: 'Vue' },
+  { value: 'React' },
+  { value: 'Angular' },
+]
+</script>
+
+<template>
+  <!-- 基础用法 -->
+  <my-autocomplete
+    v-model="value"
+    :options="options"
+    placeholder="请输入框架名称"
+    clearable
+  />
+</template>
+```
+
+### Cascader 级联选择
+
+```vue
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const value = ref([])
+const options = [
+  {
+    value: 'zhejiang',
+    label: '浙江',
+    children: [
+      {
+        value: 'hangzhou',
+        label: '杭州',
+        children: [
+          { value: 'xihu', label: '西湖' },
+        ],
+      },
+    ],
+  },
+]
+</script>
+
+<template>
+  <my-cascader v-model="value" :options="options" clearable />
+</template>
+```
+
+### Checkbox 多选框
+
+```vue
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const checked = ref(false)
+const checkedList = ref(['选项1'])
+</script>
+
+<template>
+  <!-- 单个多选框 -->
+  <my-checkbox v-model="checked">同意协议</my-checkbox>
+  
+  <!-- 多选框组 -->
+  <my-checkbox-group v-model="checkedList">
+    <my-checkbox label="选项1">选项1</my-checkbox>
+    <my-checkbox label="选项2">选项2</my-checkbox>
+    <my-checkbox label="选项3">选项3</my-checkbox>
+  </my-checkbox-group>
+</template>
+```
+
+### ColorPicker 颜色选择器
+
+```vue
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const color = ref('#409eff')
+const predefineColors = [
+  '#ff4500',
+  '#ff8c00',
+  '#ffd700',
+  '#90ee90',
+  '#00ced1',
+  '#1e90ff',
+]
+</script>
+
+<template>
+  <!-- 基础用法 -->
+  <my-color-picker v-model="color" />
+  
+  <!-- 预定义颜色 -->
+  <my-color-picker v-model="color" :predefine-colors="predefineColors" />
+</template>
+```
+
 ### FloatButton 悬浮按钮
 
 ```vue
@@ -209,9 +327,26 @@ const scrollToTop = () => {
 
 ```typescript
 import type {
+  // 基础组件
   ButtonProps,
   InputProps,
   IconProps,
+  DividerProps,
+  // 表单组件
+  AutoCompleteProps,
+  AutoCompleteOption,
+  CascaderProps,
+  CascaderOption,
+  CheckboxProps,
+  CheckboxGroupProps,
+  ColorPickerProps,
+  // 布局组件
+  FlexProps,
+  GridProps,
+  LayoutProps,
+  SpaceProps,
+  SplitterProps,
+  // 其他组件
   FloatButtonProps,
 } from 'one-wish'
 ```
@@ -271,9 +406,27 @@ A: 支持所有现代浏览器（Chrome、Firefox、Safari、Edge）。
 
 ## 更多资源
 
+### 基础组件
 - [Button 按钮](/components/button)
 - [Input 输入框](/components/input)
 - [Icon 图标](/components/icon)
 - [Divider 分割线](/components/divider)
+
+### 表单组件
+- [AutoComplete 自动完成](/components/autocomplete)
+- [Cascader 级联选择](/components/cascader)
+- [Checkbox 多选框](/components/checkbox)
+- [ColorPicker 颜色选择器](/components/color-picker)
+
+### 布局组件
+- [Flex 弹性布局](/components/flex)
+- [Grid 栅格](/components/grid)
+- [Layout 布局](/components/layout)
+- [Space 间距](/components/space)
+- [Splitter 分隔面板](/components/splitter)
+
+### 其他组件
 - [FloatButton 悬浮按钮](/components/float-button)
-- [GitHub 仓库](https://github.com/your-username/one-wish)
+
+### 链接
+- [GitHub 仓库](https://github.com/goshlu/one-wish)
