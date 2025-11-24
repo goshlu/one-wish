@@ -79,6 +79,15 @@ export default defineConfig({
           ],
         },
         {
+          text: '表单组件',
+          items: [
+            { text: 'AutoComplete 自动完成', link: '/components/autocomplete' },
+            { text: 'Cascader 级联选择', link: '/components/cascader' },
+            { text: 'Checkbox 多选框', link: '/components/checkbox' },
+            { text: 'ColorPicker 颜色选择器', link: '/components/color-picker' },
+          ],
+        },
+        {
           text: '布局组件',
           items: [
             { text: 'Flex 弹性布局', link: '/components/flex' },

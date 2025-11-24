@@ -1,7 +1,12 @@
 import type { App } from 'vue'
 import MyAnchor from './components/Anchor/Anchor.vue'
+import MyAutoComplete from './components/AutoComplete/AutoComplete.vue'
 import MyBreadcrumb from './components/Breadcrumb/Breadcrumb.vue'
 import MyButton from './components/Button/Button.vue'
+import MyCascader from './components/Cascader/Cascader.vue'
+import MyCheckbox from './components/Checkbox/Checkbox.vue'
+import MyCheckboxGroup from './components/Checkbox/CheckboxGroup.vue'
+import MyColorPicker from './components/ColorPicker/ColorPicker.vue'
 import MyDivider from './components/Divider/Divider.vue'
 import MyDropdown from './components/Dropdown/Dropdown.vue'
 import MyFlex from './components/Flex/Flex.vue'
@@ -26,8 +31,13 @@ import MyTabs from './components/Tabs/Tabs.vue'
 
 export {
   MyAnchor,
+  MyAutoComplete,
   MyBreadcrumb,
   MyButton,
+  MyCascader,
+  MyCheckbox,
+  MyCheckboxGroup,
+  MyColorPicker,
   MyDivider,
   MyDropdown,
   MyFlex,
@@ -53,8 +63,13 @@ export {
 
 const components = [
   MyAnchor,
+  MyAutoComplete,
   MyBreadcrumb,
   MyButton,
+  MyCascader,
+  MyCheckbox,
+  MyCheckboxGroup,
+  MyColorPicker,
   MyDivider,
   MyDropdown,
   MyFlex,
@@ -92,8 +107,12 @@ export default {
 }
 
 export * from './components/Anchor/types'
+export * from './components/AutoComplete/types'
 export * from './components/Breadcrumb/types'
 export * from './components/Button/types'
+export * from './components/Cascader/types'
+export * from './components/Checkbox/types'
+export * from './components/ColorPicker/types'
 export * from './components/Divider/types'
 export * from './components/Dropdown/types'
 export * from './components/Flex/types'
