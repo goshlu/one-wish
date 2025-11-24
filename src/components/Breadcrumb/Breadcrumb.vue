@@ -32,39 +32,41 @@ withDefaults(defineProps<BreadcrumbProps>(), {
 
 <style scoped>
 .my-breadcrumb {
-  display: flex;
-  align-items: center;
+  display: inline-block;
   font-size: 14px;
-  color: var(--text-secondary);
+  line-height: 1.5715;
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .my-breadcrumb__list {
   list-style: none;
-  display: inline-flex;
-  align-items: center;
+  display: inline;
   padding: 0;
   margin: 0;
-  gap: 6px;
 }
 
 .my-breadcrumb__item {
-  display: inline-flex;
-  align-items: center;
+  display: inline;
 }
 
 .my-breadcrumb__link {
-  color: inherit;
+  color: rgba(0, 0, 0, 0.45);
   text-decoration: none;
-  transition: var(--transition-base);
+  transition: color 0.2s;
 }
 
-.my-breadcrumb__link:hover {
-  color: var(--primary-color);
+a.my-breadcrumb__link:hover {
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.my-breadcrumb__item:last-child .my-breadcrumb__link {
+  color: rgba(0, 0, 0, 0.88);
+  cursor: text;
 }
 
 .my-breadcrumb__separator {
-  margin: 0 4px;
-  color: var(--text-placeholder);
+  margin: 0 8px;
+  color: rgba(0, 0, 0, 0.45);
   user-select: none;
 }
 </style>
