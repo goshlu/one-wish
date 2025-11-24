@@ -2,12 +2,12 @@
 layout: home
 
 hero:
-  name: Vue3 Component Library
+  name: One Wish
   text: 现代化组件库
   tagline: 基于 Vue 3 + TypeScript + Vite 构建的简洁、高效的 UI 组件库
   image:
     src: /logo.svg
-    alt: Vue3 Component Library
+    alt: One Wish
   actions:
     - theme: brand
       text: 快速开始
@@ -17,7 +17,7 @@ hero:
       link: /components/button
     - theme: alt
       text: GitHub
-      link: https://github.com/your-username/vue3-component-library
+      link: https://github.com/wish/one-wish
 
 features:
   - icon: 🚀

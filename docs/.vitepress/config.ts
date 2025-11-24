@@ -35,7 +35,7 @@ export default defineConfig({
           { text: '更新日志', link: '/changelog' },
           {
             text: 'GitHub',
-            link: 'https://github.com/your-username/vue3-component-library',
+            link: 'https://github.com/wish/one-wish',
           },
         ],
       },
@@ -110,13 +110,13 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/your-username/vue3-component-library',
+        link: 'https://github.com/wish/one-wish',
       },
     ],
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2025-present',
+      copyright: 'Copyright © 2025-present wish',
     },
 
     search: {

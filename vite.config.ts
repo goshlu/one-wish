@@ -12,8 +12,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'Vue3ComponentLibrary',
-      fileName: format => `vue3-component-library.${format}.js`,
+      name: 'OneWish',
+      fileName: format => `one-wish.${format}.js`,
       formats: ['es', 'umd'],
     },
     rollupOptions: {

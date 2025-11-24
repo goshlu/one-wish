@@ -1,15 +1,15 @@
 {
-  "name": "ui-library",
+  "name": "one-wish",
   "version": "1.0.0",
-  "description": "A modern Vue 3 component library built with Vite",
+  "description": "One Wish - 一个基于 Vue 3 + TypeScript + Vite 构建的现代化组件库",
   "type": "module",
-  "main": "./dist/vue3-component-library.umd.js",
-  "module": "./dist/vue3-component-library.es.js",
+  "main": "./dist/one-wish.umd.js",
+  "module": "./dist/one-wish.es.js",
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/vue3-component-library.es.js",
-      "require": "./dist/vue3-component-library.umd.js",
+      "import": "./dist/one-wish.es.js",
+      "require": "./dist/one-wish.umd.js",
       "types": "./dist/types/index.d.ts"
     },
     "./style.css": "./dist/style.css"

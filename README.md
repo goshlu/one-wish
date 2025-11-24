@@ -1,9 +1,9 @@
-# Vue3 Component Library
+# One Wish
 
 一个基于 Vue 3 + TypeScript + Vite 构建的现代化组件库。
 
-[![npm version](https://img.shields.io/npm/v/vue3-component-library.svg)](https://www.npmjs.com/package/vue3-component-library)
-[![license](https://img.shields.io/npm/l/vue3-component-library.svg)](https://github.com/your-username/vue3-component-library/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/one-wish.svg)](https://www.npmjs.com/package/one-wish)
+[![license](https://img.shields.io/npm/l/one-wish.svg)](https://github.com/wish/one-wish/blob/main/LICENSE)
 
 ## ✨ 特性
 
@@ -18,11 +18,11 @@
 ## 📦 安装
 
 ```bash
-npm install ui-library
+npm install one-wish
 # 或
-pnpm add ui-library
+pnpm add one-wish
 # 或
-yarn add ui-library
+yarn add one-wish
 ```
 
 ## 🔨 快速开始
@@ -32,19 +32,19 @@ yarn add ui-library
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
-import UiLibrary from 'ui-library'
-import 'ui-library/style.css'
+import OneWish from 'one-wish'
+import 'one-wish/style.css'
 
 const app = createApp(App)
-app.use(UiLibrary)
+app.use(OneWish)
 app.mount('#app')
 ```
 
 ### 按需引入
 
 ```js
-import { MyButton, MyInput } from 'ui-library'
-import 'ui-library/style.css'
+import { MyButton, MyInput } from 'one-wish'
+import 'one-wish/style.css'
 ```
 
 ### 使用示例
@@ -138,8 +138,8 @@ pnpm preview
 
 ## 📦 构建产物
 
-- ES Module 格式：`vue3-component-library.es.js`
-- UMD 格式：`vue3-component-library.umd.js`
+- ES Module 格式：`one-wish.es.js`
+- UMD 格式：`one-wish.umd.js`
 - 样式文件：`style.css`
 - TypeScript 类型：`types/`
 
@@ -157,7 +157,7 @@ MIT
 
 ## 👨‍💻 作者
 
-Your Name
+wish
 
 ---
 
