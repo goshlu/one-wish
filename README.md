@@ -47,6 +47,48 @@ import { MyButton, MyInput } from 'one-wish'
 import 'one-wish/style.css'
 ```
 
+### 自动按需导入（推荐）
+
+使用 `unplugin-vue-components` 插件实现自动按需导入，无需手动 import：
+
+```bash
+pnpm add -D unplugin-vue-components
+```
+
+在 `vite.config.ts` 中配置：
+
+```ts
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import Components from 'unplugin-vue-components/vite'
+import { OneWishResolver } from 'one-wish/resolver'
+
+export default defineConfig({
+  plugins: [
+    vue(),
+    Components({
+      resolvers: [OneWishResolver()],
+    }),
+  ],
+})
+```
+
+配置完成后，可以直接在模板中使用组件，无需手动导入：
+
+```vue
+<template>
+  <div>
+    <my-button type="primary">按钮</my-button>
+    <my-input v-model="value" placeholder="请输入" />
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+const value = ref('')
+</script>
+```
+
 ### 使用示例
 
 ```vue

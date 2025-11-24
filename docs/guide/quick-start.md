@@ -78,6 +78,93 @@ const handleClick = () => {
 </script>
 ```
 
+## 自动按需引入（推荐）
+
+使用 `unplugin-vue-components` 插件实现自动按需导入，无需手动 import 组件。
+
+### 1. 安装插件
+
+::: code-group
+
+```bash [npm]
+npm install -D unplugin-vue-components
+```
+
+```bash [pnpm]
+pnpm add -D unplugin-vue-components
+```
+
+```bash [yarn]
+yarn add -D unplugin-vue-components
+```
+
+:::
+
+### 2. 配置 Vite
+
+在 `vite.config.ts` 中配置：
+
+```typescript
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import Components from 'unplugin-vue-components/vite'
+import { OneWishResolver } from 'one-wish/resolver'
+
+export default defineConfig({
+  plugins: [
+    vue(),
+    Components({
+      resolvers: [OneWishResolver()],
+    }),
+  ],
+})
+```
+
+### 3. 配置 Webpack
+
+在 `webpack.config.js` 中配置：
+
+```javascript
+const Components = require('unplugin-vue-components/webpack')
+const { OneWishResolver } = require('one-wish/resolver')
+
+module.exports = {
+  plugins: [
+    Components({
+      resolvers: [OneWishResolver()],
+    }),
+  ],
+}
+```
+
+### 4. 直接使用
+
+配置完成后，可以直接在模板中使用组件，无需手动导入：
+
+```vue
+<template>
+  <div>
+    <my-button type="primary" @click="handleClick">点击我</my-button>
+    <my-input v-model="value" placeholder="输入内容" clearable />
+    <my-float-button icon="🚀" description="返回顶部" />
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+
+// 无需导入组件，插件会自动处理
+const value = ref('')
+const handleClick = () => {
+  console.log('按钮被点击')
+}
+</script>
+```
+
+::: tip 提示
+使用自动导入后，组件会在首次使用时自动注册，样式也会自动引入，无需手动导入 CSS 文件。
+:::
+
 ## CDN 引入
 
 通过 CDN 的方式可以快速使用组件库：

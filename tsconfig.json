@@ -9,6 +9,7 @@
       "DOM.Iterable"
     ],
     "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,

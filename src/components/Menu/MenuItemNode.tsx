@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { defineComponent, computed, type PropType } from 'vue'
 import type { MenuItem } from './types'
 

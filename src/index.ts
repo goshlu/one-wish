@@ -109,3 +109,6 @@ export * from './components/Space/types'
 export * from './components/Splitter/types'
 export * from './components/Steps/types'
 export * from './components/Tabs/types'
+
+// 导出 resolver 用于 unplugin-vue-components
+export { OneWishResolver } from './resolver'
