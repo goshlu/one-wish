@@ -1,0 +1,54 @@
+{
+  "name": "ui-library",
+  "version": "1.0.0",
+  "description": "A modern Vue 3 component library built with Vite",
+  "type": "module",
+  "main": "./dist/vue3-component-library.umd.js",
+  "module": "./dist/vue3-component-library.es.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vue3-component-library.es.js",
+      "require": "./dist/vue3-component-library.umd.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npm run build:types",
+    "build:types": "vue-tsc --declaration --emitDeclarationOnly --outDir dist/types src/index.ts",
+    "preview": "vite preview",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "component-library",
+    "vite",
+    "typescript"
+  ],
+  "author": "wish",
+  "license": "MIT",
+  "packageManager": "pnpm@10.15.0",
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^22.10.2",
+    "@vitejs/plugin-vue": "^6.0.2",
+    "@vitejs/plugin-vue-jsx": "^5.1.2",
+    "typescript": "^5.7.3",
+    "vite": "^5.4.21",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.24",
+    "vue-tsc": "^3.1.5"
+  }
+}

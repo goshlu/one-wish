@@ -1,0 +1,25 @@
+# 源代码
+src/
+examples/
+
+# 配置文件
+vite.config.ts
+tsconfig.json
+tsconfig.build.json
+.gitignore
+.npmignore
+
+# 文档（如果不想发布）
+# README.md
+# CHANGELOG.md
+
+# 开发文件
+index.html
+*.log
+node_modules/
+.vscode/
+.idea/
+
+# 其他
+pnpm-lock.yaml
+*.local

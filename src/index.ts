@@ -1,0 +1,111 @@
+import type { App } from 'vue'
+import MyAnchor from './components/Anchor/Anchor.vue'
+import MyBreadcrumb from './components/Breadcrumb/Breadcrumb.vue'
+import MyButton from './components/Button/Button.vue'
+import MyDivider from './components/Divider/Divider.vue'
+import MyDropdown from './components/Dropdown/Dropdown.vue'
+import MyFlex from './components/Flex/Flex.vue'
+import MyFloatButton from './components/FloatButton/FloatButton.vue'
+import MyFloatButtonGroup from './components/FloatButton/FloatButtonGroup.vue'
+import MyGrid from './components/Grid/Grid.vue'
+import MyIcon from './components/Icon/Icon.vue'
+import MyInput from './components/Input/Input.vue'
+import MyLayout from './components/Layout/Layout.vue'
+import MyLayoutContent from './components/Layout/LayoutContent.vue'
+import MyLayoutFooter from './components/Layout/LayoutFooter.vue'
+import MyLayoutHeader from './components/Layout/LayoutHeader.vue'
+import MyLayoutSider from './components/Layout/LayoutSider.vue'
+import MyMasonry from './components/Masonry/Masonry.vue'
+import MyMenu from './components/Menu/Menu.vue'
+import MyPagination from './components/Pagination/Pagination.vue'
+import MySpace from './components/Space/Space.vue'
+import MySplitter from './components/Splitter/Splitter.vue'
+import MySplitterPane from './components/Splitter/SplitterPane.vue'
+import MySteps from './components/Steps/Steps.vue'
+import MyTabs from './components/Tabs/Tabs.vue'
+
+export {
+  MyAnchor,
+  MyBreadcrumb,
+  MyButton,
+  MyDivider,
+  MyDropdown,
+  MyFlex,
+  MyFloatButton,
+  MyFloatButtonGroup,
+  MyGrid,
+  MyIcon,
+  MyInput,
+  MyLayout,
+  MyLayoutContent,
+  MyLayoutFooter,
+  MyLayoutHeader,
+  MyLayoutSider,
+  MyMasonry,
+  MyMenu,
+  MyPagination,
+  MySpace,
+  MySplitter,
+  MySplitterPane,
+  MySteps,
+  MyTabs,
+}
+
+const components = [
+  MyAnchor,
+  MyBreadcrumb,
+  MyButton,
+  MyDivider,
+  MyDropdown,
+  MyFlex,
+  MyFloatButton,
+  MyFloatButtonGroup,
+  MyGrid,
+  MyIcon,
+  MyInput,
+  MyLayout,
+  MyLayoutContent,
+  MyLayoutFooter,
+  MyLayoutHeader,
+  MyLayoutSider,
+  MyMasonry,
+  MyMenu,
+  MyPagination,
+  MySpace,
+  MySplitter,
+  MySplitterPane,
+  MySteps,
+  MyTabs,
+]
+
+const install = (app: App) => {
+  components.forEach(component => {
+    const name = component.name || (component as any).__name
+    if (name) {
+      app.component(name, component)
+    }
+  })
+}
+
+export default {
+  install,
+}
+
+export * from './components/Anchor/types'
+export * from './components/Breadcrumb/types'
+export * from './components/Button/types'
+export * from './components/Divider/types'
+export * from './components/Dropdown/types'
+export * from './components/Flex/types'
+export * from './components/FloatButton/types'
+export * from './components/Grid/types'
+export * from './components/Icon/types'
+export * from './components/Input/types'
+export * from './components/Layout/types'
+export * from './components/Masonry/types'
+export * from './components/Menu/types'
+export * from './components/Pagination/types'
+export * from './components/Space/types'
+export * from './components/Splitter/types'
+export * from './components/Steps/types'
+export * from './components/Tabs/types'

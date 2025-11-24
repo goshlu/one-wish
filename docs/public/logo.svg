@@ -1,0 +1,20 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆 -->
+  <circle cx="64" cy="64" r="60" fill="#409eff" opacity="0.1"/>
+  
+  <!-- 主图标 - 简化的组件符号 -->
+  <g transform="translate(32, 32)">
+    <!-- 外框 -->
+    <rect x="0" y="0" width="64" height="64" rx="8" fill="none" stroke="#409eff" stroke-width="4"/>
+    
+    <!-- 内部组件块 -->
+    <rect x="12" y="12" width="18" height="18" rx="2" fill="#409eff"/>
+    <rect x="34" y="12" width="18" height="18" rx="2" fill="#66b1ff"/>
+    <rect x="12" y="34" width="18" height="18" rx="2" fill="#66b1ff"/>
+    <rect x="34" y="34" width="18" height="18" rx="2" fill="#409eff"/>
+  </g>
+  
+  <!-- 点缀 -->
+  <circle cx="96" cy="32" r="4" fill="#409eff"/>
+  <circle cx="32" cy="96" r="4" fill="#66b1ff"/>
+</svg>

@@ -1,0 +1,36 @@
+/* 全局样式重置 */
+* {
+  box-sizing: border-box;
+}
+
+/* CSS 变量定义 */
+:root {
+  --primary-color: #409eff;
+  --primary-hover: #66b1ff;
+  --primary-active: #3a8ee6;
+  --success-color: #67c23a;
+  --warning-color: #e6a23c;
+  --danger-color: #f56c6c;
+  --info-color: #909399;
+
+  --text-primary: #303133;
+  --text-regular: #606266;
+  --text-secondary: #909399;
+  --text-placeholder: #c0c4cc;
+
+  --border-color-base: #dcdfe6;
+  --border-color-light: #e4e7ed;
+  --border-color-lighter: #ebeef5;
+
+  --bg-color: #ffffff;
+  --bg-color-light: #f5f7fa;
+
+  --border-radius-base: 4px;
+  --border-radius-small: 2px;
+
+  --font-size-base: 14px;
+  --font-size-small: 13px;
+  --font-size-large: 16px;
+
+  --transition-base: all 0.2s ease;
+}
