@@ -74,6 +74,7 @@ export default defineConfig({
           items: [
             { text: 'Button 按钮', link: '/components/button' },
             { text: 'Input 输入框', link: '/components/input' },
+            { text: 'InputNumber 数字输入框', link: '/components/input-number' },
             { text: 'Icon 图标', link: '/components/icon' },
             { text: 'Divider 分割线', link: '/components/divider' },
           ],

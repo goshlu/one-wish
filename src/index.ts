@@ -16,6 +16,7 @@ import MyFloatButtonGroup from './components/FloatButton/FloatButtonGroup.vue'
 import MyGrid from './components/Grid/Grid.vue'
 import MyIcon from './components/Icon/Icon.vue'
 import MyInput from './components/Input/Input.vue'
+import MyInputNumber from './components/InputNumber/InputNumber.vue'
 import MyLayout from './components/Layout/Layout.vue'
 import MyLayoutContent from './components/Layout/LayoutContent.vue'
 import MyLayoutFooter from './components/Layout/LayoutFooter.vue'
@@ -48,6 +49,7 @@ export {
   MyGrid,
   MyIcon,
   MyInput,
+  MyInputNumber,
   MyLayout,
   MyLayoutContent,
   MyLayoutFooter,
@@ -81,6 +83,7 @@ const components = [
   MyGrid,
   MyIcon,
   MyInput,
+  MyInputNumber,
   MyLayout,
   MyLayoutContent,
   MyLayoutFooter,
@@ -124,6 +127,7 @@ export * from './components/FloatButton/types'
 export * from './components/Grid/types'
 export * from './components/Icon/types'
 export * from './components/Input/types'
+export * from './components/InputNumber/types'
 export * from './components/Layout/types'
 export * from './components/Masonry/types'
 export * from './components/Menu/types'
