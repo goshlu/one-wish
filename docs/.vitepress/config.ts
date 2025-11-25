@@ -1,9 +1,17 @@
 import { defineConfig } from 'vitepress'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import { fileURLToPath } from 'node:url'
+
+const libraryEntry = fileURLToPath(new URL('../../src/index.ts', import.meta.url))
 
 export default defineConfig({
   vite: {
     plugins: [vueJsx()],
+    resolve: {
+      alias: {
+        'one-wish': libraryEntry,
+      },
+    },
     server: {
       port: 8390,
     },
@@ -87,6 +95,7 @@ export default defineConfig({
             { text: 'Checkbox 多选框', link: '/components/checkbox' },
             { text: 'ColorPicker 颜色选择器', link: '/components/color-picker' },
             { text: 'DatePicker 日期选择器', link: '/components/date-picker' },
+            { text: 'Form 表单', link: '/components/form' },
           ],
         },
         {

@@ -6,7 +6,7 @@
       :type="type"
       :value="modelValue"
       :placeholder="placeholder"
-      :disabled="disabled"
+      :disabled="finalDisabled"
       :readonly="readonly"
       :maxlength="maxlength"
       @input="handleInput"
@@ -15,7 +15,7 @@
       @blur="handleBlur"
     />
     <span
-      v-if="clearable && modelValue && !disabled && !readonly"
+      v-if="clearable && modelValue && !finalDisabled && !readonly"
       class="my-input__clear"
       @click="handleClear"
     >
@@ -28,8 +28,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, inject, ref } from 'vue'
 import type { InputProps, InputEmits } from './types'
+import type { FormItemContext } from '../Form/types'
+import { formItemContextKey } from '../Form/types'
 
 defineOptions({
   name: 'MyInput',
@@ -38,7 +40,6 @@ defineOptions({
 const props = withDefaults(defineProps<InputProps>(), {
   modelValue: '',
   type: 'text',
-  size: 'default',
   placeholder: '',
   disabled: false,
   clearable: false,
@@ -49,19 +50,23 @@ const props = withDefaults(defineProps<InputProps>(), {
 const emit = defineEmits<InputEmits>()
 
 const inputRef = ref<HTMLInputElement>()
+const formItem = inject<FormItemContext | null>(formItemContextKey, null)
+
+const finalSize = computed(() => props.size ?? formItem?.size.value ?? 'default')
+const finalDisabled = computed(() => props.disabled || formItem?.disabled.value || false)
 
 const inputWrapperClass = computed(() => {
   return [
     'my-input-wrapper',
-    `my-input-wrapper--${props.size}`,
+    `my-input-wrapper--${finalSize.value}`,
     {
-      'is-disabled': props.disabled,
+      'is-disabled': finalDisabled.value,
     },
   ]
 })
 
 const inputClass = computed(() => {
-  return ['my-input', `my-input--${props.size}`]
+  return ['my-input', `my-input--${finalSize.value}`]
 })
 
 const handleInput = (event: Event) => {
@@ -69,11 +74,13 @@ const handleInput = (event: Event) => {
   const value = target.value
   emit('update:modelValue', value)
   emit('input', value)
+  formItem?.onFieldChange()
 }
 
 const handleChange = (event: Event) => {
   const target = event.target as HTMLInputElement
   emit('change', target.value)
+  formItem?.onFieldChange()
 }
 
 const handleFocus = (event: FocusEvent) => {
@@ -82,12 +89,14 @@ const handleFocus = (event: FocusEvent) => {
 
 const handleBlur = (event: FocusEvent) => {
   emit('blur', event)
+  formItem?.onFieldBlur()
 }
 
 const handleClear = () => {
   emit('update:modelValue', '')
   emit('clear')
   inputRef.value?.focus()
+  formItem?.onFieldChange()
 }
 </script>
 
@@ -104,9 +113,10 @@ const handleClear = () => {
   padding: 8px 12px;
   font-size: var(--font-size-base);
   color: var(--text-regular);
-  background-color: var(--bg-color);
-  border: 1px solid var(--border-color-base);
-  border-radius: var(--border-radius-base);
+  background-color: var(--form-control-bg, var(--bg-color));
+  border: 1px solid var(--form-control-border, var(--border-color-base));
+  border-width: var(--form-control-border-width, 1px);
+  border-radius: var(--form-control-radius, var(--border-radius-base));
   outline: none;
   transition: var(--transition-base);
 }
@@ -116,11 +126,12 @@ const handleClear = () => {
 }
 
 .my-input:hover:not(:disabled) {
-  border-color: var(--border-color-light);
+  border-color: var(--form-control-hover-border, var(--border-color-light));
 }
 
 .my-input:focus {
-  border-color: var(--primary-color);
+  border-color: var(--form-control-focus-border, var(--primary-color));
+  box-shadow: var(--form-control-focus-shadow, none);
 }
 
 .my-input:disabled {

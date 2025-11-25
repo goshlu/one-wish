@@ -24,6 +24,8 @@ import MyLayoutHeader from './components/Layout/LayoutHeader.vue'
 import MyLayoutSider from './components/Layout/LayoutSider.vue'
 import MyMasonry from './components/Masonry/Masonry.vue'
 import MyMenu from './components/Menu/Menu.vue'
+import MyForm from './components/Form/Form.vue'
+import MyFormItem from './components/Form/FormItem.vue'
 import MyPagination from './components/Pagination/Pagination.vue'
 import MySpace from './components/Space/Space.vue'
 import MySplitter from './components/Splitter/Splitter.vue'
@@ -56,6 +58,8 @@ export {
   MyLayoutHeader,
   MyLayoutSider,
   MyMasonry,
+  MyForm,
+  MyFormItem,
   MyMenu,
   MyPagination,
   MySpace,
@@ -90,6 +94,8 @@ const components = [
   MyLayoutHeader,
   MyLayoutSider,
   MyMasonry,
+  MyForm,
+  MyFormItem,
   MyMenu,
   MyPagination,
   MySpace,
@@ -130,6 +136,7 @@ export * from './components/Input/types'
 export * from './components/InputNumber/types'
 export * from './components/Layout/types'
 export * from './components/Masonry/types'
+export * from './components/Form/types'
 export * from './components/Menu/types'
 export * from './components/Pagination/types'
 export * from './components/Space/types'
@@ -139,3 +146,4 @@ export * from './components/Tabs/types'
 
 // 导出 resolver 用于 unplugin-vue-components
 export { OneWishResolver } from './resolver'
+export { useForm } from './components/Form/useForm'
