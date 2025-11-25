@@ -7,6 +7,7 @@ import MyCascader from './components/Cascader/Cascader.vue'
 import MyCheckbox from './components/Checkbox/Checkbox.vue'
 import MyCheckboxGroup from './components/Checkbox/CheckboxGroup.vue'
 import MyColorPicker from './components/ColorPicker/ColorPicker.vue'
+import MyDatePicker from './components/DatePicker/DatePicker.vue'
 import MyDivider from './components/Divider/Divider.vue'
 import MyDropdown from './components/Dropdown/Dropdown.vue'
 import MyFlex from './components/Flex/Flex.vue'
@@ -38,6 +39,7 @@ export {
   MyCheckbox,
   MyCheckboxGroup,
   MyColorPicker,
+  MyDatePicker,
   MyDivider,
   MyDropdown,
   MyFlex,
@@ -70,6 +72,7 @@ const components = [
   MyCheckbox,
   MyCheckboxGroup,
   MyColorPicker,
+  MyDatePicker,
   MyDivider,
   MyDropdown,
   MyFlex,
@@ -113,6 +116,7 @@ export * from './components/Button/types'
 export * from './components/Cascader/types'
 export * from './components/Checkbox/types'
 export * from './components/ColorPicker/types'
+export * from './components/DatePicker/types'
 export * from './components/Divider/types'
 export * from './components/Dropdown/types'
 export * from './components/Flex/types'

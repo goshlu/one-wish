@@ -22,6 +22,7 @@ import MyFloatButtonGroup from '../../../src/components/FloatButton/FloatButtonG
 import MyGrid from '../../../src/components/Grid/Grid.vue'
 import MyIcon from '../../../src/components/Icon/Icon.vue'
 import MyInput from '../../../src/components/Input/Input.vue'
+import MyDatePicker from '../../../src/components/DatePicker/DatePicker.vue'
 import MyLayout from '../../../src/components/Layout/Layout.vue'
 import MyLayoutContent from '../../../src/components/Layout/LayoutContent.vue'
 import MyLayoutFooter from '../../../src/components/Layout/LayoutFooter.vue'
@@ -62,6 +63,7 @@ export default {
     app.component('MyGrid', MyGrid)
     app.component('MyIcon', MyIcon)
     app.component('MyInput', MyInput)
+    app.component('MyDatePicker', MyDatePicker)
     app.component('MyLayout', MyLayout)
     app.component('MyLayoutContent', MyLayoutContent)
     app.component('MyLayoutFooter', MyLayoutFooter)
