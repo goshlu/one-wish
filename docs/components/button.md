@@ -162,6 +162,7 @@
 | -------- | ------------ | --------- | ----------------------------------------------------------------- | --------- |
 | type     | 按钮类型     | `string`  | `primary` / `success` / `warning` / `danger` / `info` / `default` | `default` |
 | size     | 按钮尺寸     | `string`  | `large` / `default` / `small`                                     | `default` |
+| nativeType | 原生 `type` 属性 | `string` | `button` / `submit` / `reset` | `button` |
 | disabled | 是否禁用     | `boolean` | —                                                                 | `false`   |
 | loading  | 是否加载中   | `boolean` | —                                                                 | `false`   |
 | round    | 是否圆角按钮 | `boolean` | —                                                                 | `false`   |

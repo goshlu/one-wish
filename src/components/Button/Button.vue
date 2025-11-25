@@ -1,6 +1,7 @@
 <template>
   <button
     :class="buttonClass"
+    :type="nativeType"
     :disabled="disabled || loading"
     @click="handleClick"
   >
@@ -20,6 +21,7 @@ defineOptions({
 const props = withDefaults(defineProps<ButtonProps>(), {
   type: 'default',
   size: 'default',
+  nativeType: 'button',
   disabled: false,
   loading: false,
   round: false,
