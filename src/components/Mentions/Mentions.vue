@@ -154,7 +154,7 @@ const updateMeasureState = () => {
   }
 }
 
-const getMeasureInfo = (text: string, selectionStart: number) => {
+const getMeasureInfo = (text: string, selectionStart: number): { prefix: string; start: number; search: string } | null => {
   let match: { prefix: string; start: number; search: string } | null = null
   prefixList.value.forEach(prefix => {
     const idx = text.lastIndexOf(prefix, selectionStart - 1)
