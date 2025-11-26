@@ -24,6 +24,7 @@ import MyIcon from '../../../src/components/Icon/Icon.vue'
 import MyInput from '../../../src/components/Input/Input.vue'
 import MyInputNumber from '../../../src/components/InputNumber/InputNumber.vue'
 import MyDatePicker from '../../../src/components/DatePicker/DatePicker.vue'
+import MyMentions from '../../../src/components/Mentions/Mentions.vue'
 import MyForm from '../../../src/components/Form/Form.vue'
 import MyFormItem from '../../../src/components/Form/FormItem.vue'
 import MyLayout from '../../../src/components/Layout/Layout.vue'
@@ -68,6 +69,7 @@ export default {
     app.component('MyInput', MyInput)
     app.component('MyInputNumber', MyInputNumber)
     app.component('MyDatePicker', MyDatePicker)
+    app.component('MyMentions', MyMentions)
     app.component('MyForm', MyForm)
     app.component('MyFormItem', MyFormItem)
     app.component('MyLayout', MyLayout)

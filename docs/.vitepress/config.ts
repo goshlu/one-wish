@@ -96,6 +96,7 @@ export default defineConfig({
             { text: 'ColorPicker 颜色选择器', link: '/components/color-picker' },
             { text: 'DatePicker 日期选择器', link: '/components/date-picker' },
             { text: 'Form 表单', link: '/components/form' },
+            { text: 'Mentions 提及', link: '/components/mentions' },
           ],
         },
         {

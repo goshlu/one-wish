@@ -17,6 +17,7 @@ import MyGrid from './components/Grid/Grid.vue'
 import MyIcon from './components/Icon/Icon.vue'
 import MyInput from './components/Input/Input.vue'
 import MyInputNumber from './components/InputNumber/InputNumber.vue'
+import MyMentions from './components/Mentions/Mentions.vue'
 import MyLayout from './components/Layout/Layout.vue'
 import MyLayoutContent from './components/Layout/LayoutContent.vue'
 import MyLayoutFooter from './components/Layout/LayoutFooter.vue'
@@ -52,6 +53,7 @@ export {
   MyIcon,
   MyInput,
   MyInputNumber,
+  MyMentions,
   MyLayout,
   MyLayoutContent,
   MyLayoutFooter,
@@ -88,6 +90,7 @@ const components = [
   MyIcon,
   MyInput,
   MyInputNumber,
+  MyMentions,
   MyLayout,
   MyLayoutContent,
   MyLayoutFooter,
@@ -134,6 +137,7 @@ export * from './components/Grid/types'
 export * from './components/Icon/types'
 export * from './components/Input/types'
 export * from './components/InputNumber/types'
+export * from './components/Mentions/types'
 export * from './components/Layout/types'
 export * from './components/Masonry/types'
 export * from './components/Form/types'
