@@ -29,6 +29,7 @@ import MyRadio from '../../../src/components/Radio/Radio.vue'
 import MyRadioGroup from '../../../src/components/Radio/RadioGroup.vue'
 import MyRate from '../../../src/components/Rate/Rate.vue'
 import MySelect from '../../../src/components/Select/Select.vue'
+import MySwitch from '../../../src/components/Switch/Switch.vue'
 import MyForm from '../../../src/components/Form/Form.vue'
 import MyFormItem from '../../../src/components/Form/FormItem.vue'
 import MyLayout from '../../../src/components/Layout/Layout.vue'
@@ -78,6 +79,7 @@ export default {
     app.component('MyRadioGroup', MyRadioGroup)
     app.component('MyRate', MyRate)
     app.component('MySelect', MySelect)
+    app.component('MySwitch', MySwitch)
     app.component('MyForm', MyForm)
     app.component('MyFormItem', MyFormItem)
     app.component('MyLayout', MyLayout)
