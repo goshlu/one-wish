@@ -97,6 +97,7 @@ export default defineConfig({
             { text: 'DatePicker 日期选择器', link: '/components/date-picker' },
             { text: 'Form 表单', link: '/components/form' },
             { text: 'Mentions 提及', link: '/components/mentions' },
+            { text: 'Radio 单选框', link: '/components/radio' },
           ],
         },
         {
