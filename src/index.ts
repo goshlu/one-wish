@@ -21,6 +21,7 @@ import MyMentions from './components/Mentions/Mentions.vue'
 import MyRadio from './components/Radio/Radio.vue'
 import MyRadioGroup from './components/Radio/RadioGroup.vue'
 import MyRate from './components/Rate/Rate.vue'
+import MySelect from './components/Select/Select.vue'
 import MyLayout from './components/Layout/Layout.vue'
 import MyLayoutContent from './components/Layout/LayoutContent.vue'
 import MyLayoutFooter from './components/Layout/LayoutFooter.vue'
@@ -60,6 +61,7 @@ export {
   MyRadio,
   MyRadioGroup,
   MyRate,
+  MySelect,
   MyLayout,
   MyLayoutContent,
   MyLayoutFooter,
@@ -100,6 +102,7 @@ const components = [
   MyRadio,
   MyRadioGroup,
   MyRate,
+  MySelect,
   MyLayout,
   MyLayoutContent,
   MyLayoutFooter,
@@ -149,6 +152,7 @@ export * from './components/InputNumber/types'
 export * from './components/Mentions/types'
 export * from './components/Radio/types'
 export * from './components/Rate/types'
+export * from './components/Select/types'
 export * from './components/Layout/types'
 export * from './components/Masonry/types'
 export * from './components/Form/types'
