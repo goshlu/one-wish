@@ -27,6 +27,7 @@ import MyDatePicker from '../../../src/components/DatePicker/DatePicker.vue'
 import MyMentions from '../../../src/components/Mentions/Mentions.vue'
 import MyRadio from '../../../src/components/Radio/Radio.vue'
 import MyRadioGroup from '../../../src/components/Radio/RadioGroup.vue'
+import MyRate from '../../../src/components/Rate/Rate.vue'
 import MyForm from '../../../src/components/Form/Form.vue'
 import MyFormItem from '../../../src/components/Form/FormItem.vue'
 import MyLayout from '../../../src/components/Layout/Layout.vue'
@@ -74,6 +75,7 @@ export default {
     app.component('MyMentions', MyMentions)
     app.component('MyRadio', MyRadio)
     app.component('MyRadioGroup', MyRadioGroup)
+    app.component('MyRate', MyRate)
     app.component('MyForm', MyForm)
     app.component('MyFormItem', MyFormItem)
     app.component('MyLayout', MyLayout)

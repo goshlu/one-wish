@@ -98,6 +98,7 @@ export default defineConfig({
             { text: 'Form 表单', link: '/components/form' },
             { text: 'Mentions 提及', link: '/components/mentions' },
             { text: 'Radio 单选框', link: '/components/radio' },
+            { text: 'Rate 评分', link: '/components/rate' },
           ],
         },
         {
