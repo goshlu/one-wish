@@ -47,6 +47,7 @@ import MySteps from '../../../src/components/Steps/Steps.vue'
 import MyTabs from '../../../src/components/Tabs/Tabs.vue'
 import MyTimePicker from '../../../src/components/TimePicker/TimePicker.vue'
 import MyTransfer from '../../../src/components/Transfer/Transfer.vue'
+import MyTreeSelect from '../../../src/components/TreeSelect/TreeSelect.vue'
 
 // 导入演示组件
 import Demo from './components/Demo.vue'
@@ -99,6 +100,7 @@ export default {
     app.component('MyTabs', MyTabs)
     app.component('MyTimePicker', MyTimePicker)
     app.component('MyTransfer', MyTransfer)
+    app.component('MyTreeSelect', MyTreeSelect)
 
     // 注册演示组件
     app.component('Demo', Demo)
