@@ -101,6 +101,7 @@ export default defineConfig({
             { text: 'Rate 评分', link: '/components/rate' },
             { text: 'Select 选择器', link: '/components/select' },
             { text: 'Switch 开关', link: '/components/switch' },
+            { text: 'TimePicker 时间选择器', link: '/components/time-picker' },
           ],
         },
         {
