@@ -39,6 +39,7 @@ import MySplitterPane from './components/Splitter/SplitterPane.vue'
 import MySteps from './components/Steps/Steps.vue'
 import MyTabs from './components/Tabs/Tabs.vue'
 import MyTimePicker from './components/TimePicker/TimePicker.vue'
+import MyTransfer from './components/Transfer/Transfer.vue'
 
 export {
   MyAnchor,
@@ -81,6 +82,7 @@ export {
   MySteps,
   MyTabs,
   MyTimePicker,
+  MyTransfer,
 }
 
 const components = [
@@ -124,6 +126,7 @@ const components = [
   MySteps,
   MyTabs,
   MyTimePicker,
+  MyTransfer,
 ]
 
 const install = (app: App) => {
@@ -170,6 +173,7 @@ export * from './components/Splitter/types'
 export * from './components/Steps/types'
 export * from './components/Tabs/types'
 export * from './components/TimePicker/types'
+export * from './components/Transfer/types'
 
 // 导出 resolver 用于 unplugin-vue-components
 export { OneWishResolver } from './resolver'

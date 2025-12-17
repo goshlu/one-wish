@@ -45,6 +45,8 @@ import MySplitter from '../../../src/components/Splitter/Splitter.vue'
 import MySplitterPane from '../../../src/components/Splitter/SplitterPane.vue'
 import MySteps from '../../../src/components/Steps/Steps.vue'
 import MyTabs from '../../../src/components/Tabs/Tabs.vue'
+import MyTimePicker from '../../../src/components/TimePicker/TimePicker.vue'
+import MyTransfer from '../../../src/components/Transfer/Transfer.vue'
 
 // 导入演示组件
 import Demo from './components/Demo.vue'
@@ -95,6 +97,8 @@ export default {
     app.component('MySplitterPane', MySplitterPane)
     app.component('MySteps', MySteps)
     app.component('MyTabs', MyTabs)
+    app.component('MyTimePicker', MyTimePicker)
+    app.component('MyTransfer', MyTransfer)
 
     // 注册演示组件
     app.component('Demo', Demo)
