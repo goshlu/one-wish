@@ -8,6 +8,7 @@ import '../../../src/styles/index.css'
 // 导入组件库
 import MyAnchor from '../../../src/components/Anchor/Anchor.vue'
 import MyAutoComplete from '../../../src/components/AutoComplete/AutoComplete.vue'
+import MyAvatar from '../../../src/components/Avatar/Avatar.vue'
 import MyBreadcrumb from '../../../src/components/Breadcrumb/Breadcrumb.vue'
 import MyButton from '../../../src/components/Button/Button.vue'
 import MyCascader from '../../../src/components/Cascader/Cascader.vue'
@@ -62,6 +63,7 @@ export default {
     // 注册组件库组件
     app.component('MyAnchor', MyAnchor)
     app.component('MyAutoComplete', MyAutoComplete)
+    app.component('MyAvatar', MyAvatar)
     app.component('MyBreadcrumb', MyBreadcrumb)
     app.component('MyButton', MyButton)
     app.component('MyCascader', MyCascader)

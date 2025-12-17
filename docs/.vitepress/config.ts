@@ -80,6 +80,7 @@ export default defineConfig({
         {
           text: '基础组件',
           items: [
+            { text: 'Avatar 头像', link: '/components/avatar' },
             { text: 'Button 按钮', link: '/components/button' },
             { text: 'Input 输入框', link: '/components/input' },
             { text: 'InputNumber 数字输入框', link: '/components/input-number' },
