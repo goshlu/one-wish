@@ -41,6 +41,7 @@ import MyTabs from './components/Tabs/Tabs.vue'
 import MyTimePicker from './components/TimePicker/TimePicker.vue'
 import MyTransfer from './components/Transfer/Transfer.vue'
 import MyTreeSelect from './components/TreeSelect/TreeSelect.vue'
+import MyUpload from './components/Upload/Upload.vue'
 
 export {
   MyAnchor,
@@ -85,6 +86,7 @@ export {
   MyTimePicker,
   MyTransfer,
   MyTreeSelect,
+  MyUpload,
 }
 
 const components = [
@@ -130,6 +132,7 @@ const components = [
   MyTimePicker,
   MyTransfer,
   MyTreeSelect,
+  MyUpload,
 ]
 
 const install = (app: App) => {
@@ -178,6 +181,7 @@ export * from './components/Tabs/types'
 export * from './components/TimePicker/types'
 export * from './components/Transfer/types'
 export * from './components/TreeSelect/types'
+export * from './components/Upload/types'
 
 // 导出 resolver 用于 unplugin-vue-components
 export { OneWishResolver } from './resolver'
