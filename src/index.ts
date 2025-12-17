@@ -2,6 +2,7 @@ import type { App } from 'vue'
 import MyAnchor from './components/Anchor/Anchor.vue'
 import MyAutoComplete from './components/AutoComplete/AutoComplete.vue'
 import MyAvatar from './components/Avatar/Avatar.vue'
+import MyBadge from './components/Badge/Badge.vue'
 import MyBreadcrumb from './components/Breadcrumb/Breadcrumb.vue'
 import MyButton from './components/Button/Button.vue'
 import MyCascader from './components/Cascader/Cascader.vue'
@@ -48,6 +49,7 @@ export {
   MyAnchor,
   MyAutoComplete,
   MyAvatar,
+  MyBadge,
   MyBreadcrumb,
   MyButton,
   MyCascader,
@@ -95,6 +97,7 @@ const components = [
   MyAnchor,
   MyAutoComplete,
   MyAvatar,
+  MyBadge,
   MyBreadcrumb,
   MyButton,
   MyCascader,
@@ -154,6 +157,7 @@ export default {
 export * from './components/Anchor/types'
 export * from './components/AutoComplete/types'
 export * from './components/Avatar/types'
+export * from './components/Badge/types'
 export * from './components/Breadcrumb/types'
 export * from './components/Button/types'
 export * from './components/Cascader/types'
