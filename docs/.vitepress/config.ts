@@ -83,6 +83,7 @@ export default defineConfig({
             { text: 'Avatar 头像', link: '/components/avatar' },
             { text: 'Badge 标记', link: '/components/badge' },
             { text: 'Button 按钮', link: '/components/button' },
+            { text: 'Card 卡片', link: '/components/card' },
             { text: 'Input 输入框', link: '/components/input' },
             { text: 'InputNumber 数字输入框', link: '/components/input-number' },
             { text: 'Icon 图标', link: '/components/icon' },

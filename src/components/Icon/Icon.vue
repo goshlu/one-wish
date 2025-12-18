@@ -37,7 +37,7 @@ const iconClass = computed(() => {
     'my-icon',
     `my-icon--${props.size}`,
     {
-      'is-spin': props.spin,
+      'my-icon--spin': props.spin,
     },
   ]
 })

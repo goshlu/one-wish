@@ -93,7 +93,8 @@ import 'one-wish/style.css'
 
 ### 其他组件
 
-- **FloatButton** - 悬浮按钮组件
+- **FloatButton** - 悜浮按钮组件
+- **Card** - 卡片组件
 - **FloatButtonGroup** - 悬浮按钮组
 
 ## 快速示例
@@ -104,16 +105,16 @@ import 'one-wish/style.css'
 <template>
   <!-- 基础按钮 -->
   <my-button>默认按钮</my-button>
-  
+
   <!-- 不同类型 -->
   <my-button type="primary">主要按钮</my-button>
   <my-button type="success">成功按钮</my-button>
   <my-button type="danger">危险按钮</my-button>
-  
+
   <!-- 不同大小 -->
   <my-button size="large">大按钮</my-button>
   <my-button size="small">小按钮</my-button>
-  
+
   <!-- 其他状态 -->
   <my-button disabled>禁用按钮</my-button>
   <my-button loading>加载中</my-button>
@@ -128,15 +129,15 @@ import 'one-wish/style.css'
 <template>
   <!-- 基础输入框 -->
   <my-input placeholder="请输入内容" />
-  
+
   <!-- 不同类型 -->
   <my-input type="password" placeholder="请输入密码" />
   <my-input type="number" placeholder="请输入数字" />
-  
+
   <!-- 不同大小 -->
   <my-input size="large" placeholder="大输入框" />
   <my-input size="small" placeholder="小输入框" />
-  
+
   <!-- 其他状态 -->
   <my-input disabled placeholder="禁用输入框" />
   <my-input readonly placeholder="只读输入框" />
@@ -150,16 +151,16 @@ import 'one-wish/style.css'
 <template>
   <!-- 基础图标 -->
   <my-icon name="star" />
-  
+
   <!-- 自定义大小 -->
   <my-icon name="star" size="32" />
-  
+
   <!-- 自定义颜色 -->
   <my-icon name="star" color="red" />
-  
+
   <!-- 旋转动画 -->
   <my-icon name="loading" spin />
-  
+
   <!-- 描边样式 -->
   <my-icon name="circle" fill="none" stroke="currentColor" />
 </template>
@@ -171,20 +172,20 @@ import 'one-wish/style.css'
 <template>
   <!-- 基础分割线 -->
   <my-divider />
-  
+
   <!-- 竖直分割线 -->
   <my-divider direction="vertical" />
-  
+
   <!-- 带文字的分割线 -->
   <my-divider content="分割线" />
-  
+
   <!-- 不同样式 -->
   <my-divider content="虚线" borderStyle="dashed" />
   <my-divider content="点线" borderStyle="dotted" />
-  
+
   <!-- 自定义颜色 -->
   <my-divider content="红色" borderColor="red" textColor="red" />
-  
+
   <!-- 文字位置 -->
   <my-divider content="左对齐" contentPosition="left" />
   <my-divider content="右对齐" contentPosition="right" />
@@ -198,11 +199,7 @@ import 'one-wish/style.css'
 import { ref } from 'vue'
 
 const value = ref('')
-const options = [
-  { value: 'Vue' },
-  { value: 'React' },
-  { value: 'Angular' },
-]
+const options = [{ value: 'Vue' }, { value: 'React' }, { value: 'Angular' }]
 </script>
 
 <template>
@@ -231,9 +228,7 @@ const options = [
       {
         value: 'hangzhou',
         label: '杭州',
-        children: [
-          { value: 'xihu', label: '西湖' },
-        ],
+        children: [{ value: 'xihu', label: '西湖' }],
       },
     ],
   },
@@ -258,7 +253,7 @@ const checkedList = ref(['选项1'])
 <template>
   <!-- 单个多选框 -->
   <my-checkbox v-model="checked">同意协议</my-checkbox>
-  
+
   <!-- 多选框组 -->
   <my-checkbox-group v-model="checkedList">
     <my-checkbox label="选项1">选项1</my-checkbox>
@@ -288,35 +283,101 @@ const predefineColors = [
 <template>
   <!-- 基础用法 -->
   <my-color-picker v-model="color" />
-  
+
   <!-- 预定义颜色 -->
   <my-color-picker v-model="color" :predefine-colors="predefineColors" />
 </template>
 ```
 
-### FloatButton 悬浮按钮
+### FloatButton 悜浮按钮
 
 ```vue
 <template>
-  <!-- 基础悬浮按钮 -->
+  <!-- 基础悜浮按钮 -->
   <my-float-button icon="↑" tooltip="返回顶部" @click="scrollToTop" />
-  
+
   <!-- 不同类型 -->
   <my-float-button type="primary" icon="💬" description="客服" />
-  
+
   <!-- 不同形状 -->
   <my-float-button shape="square" icon="↑" />
-  
+
   <!-- 不同位置 -->
   <my-float-button position="left-bottom" icon="↑" />
-  
-  <!-- 带徽标 -->
+
+  <!-- 带征标 -->
   <my-float-button icon="🔔" :badge="5" tooltip="通知" />
 </template>
 
 <script setup lang="ts">
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+</script>
+```
+
+### Card 卡片
+
+```vue
+<template>
+  <!-- 基础卡片 -->
+  <my-card title="卡片标题">
+    <p>这是卡片的内容</p>
+  </my-card>
+
+  <!-- 带副标题 -->
+  <my-card title="产品名称" subtitle="产品描述">
+    <p>产品信息</p>
+  </my-card>
+
+  <!-- 不同阴影 -->
+  <my-card shadow="always" title="总是有阴影">
+    <p>阿影效果</p>
+  </my-card>
+
+  <my-card shadow="hover" title="悬停时有阴影">
+    <p>阊c停时显示阴影</p>
+  </my-card>
+
+  <!-- 可悬浮卡片 -->
+  <my-card hoverable title="可交互卡片" @click="handleCardClick">
+    <p>悬浮时会升起</p>
+  </my-card>
+
+  <!-- 加载状态 -->
+  <my-card :loading="isLoading" title="加载中...">
+    <p>内容</p>
+  </my-card>
+
+  <!-- 不同尺寸 -->
+  <my-card size="small" title="小卡片">
+    <p>小尺寸</p>
+  </my-card>
+
+  <my-card size="large" title="大卡片">
+    <p>大尺寸</p>
+  </my-card>
+
+  <!-- 带操作区 -->
+  <my-card title="有操作的卡片">
+    <template #extra>
+      <my-button type="primary" size="small">编辑</my-button>
+    </template>
+    <p>内容</p>
+    <template #actions>
+      <my-button plain type="primary" size="small">保存</my-button>
+      <my-button plain type="danger" size="small">删除</my-button>
+    </template>
+  </my-card>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const isLoading = ref(false)
+
+const handleCardClick = () => {
+  console.log('卡片被点击')
 }
 </script>
 ```
@@ -363,11 +424,11 @@ import type {
   --my-button-primary-color: #409eff;
   --my-button-success-color: #67c23a;
   --my-button-danger-color: #f56c6c;
-  
+
   /* 输入框 */
   --my-input-border-color: #dcdfe6;
   --my-input-focus-color: #409eff;
-  
+
   /* 图标 */
   --my-icon-color: currentColor;
 }
@@ -383,7 +444,7 @@ A: 创建一个插件文件 `plugins/ui-library.ts`：
 import OneWish from 'one-wish'
 import 'one-wish/style.css'
 
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(nuxtApp => {
   nuxtApp.vueApp.use(OneWish)
 })
 ```
@@ -407,18 +468,21 @@ A: 支持所有现代浏览器（Chrome、Firefox、Safari、Edge）。
 ## 更多资源
 
 ### 基础组件
+
 - [Button 按钮](/components/button)
 - [Input 输入框](/components/input)
 - [Icon 图标](/components/icon)
 - [Divider 分割线](/components/divider)
 
 ### 表单组件
+
 - [AutoComplete 自动完成](/components/autocomplete)
 - [Cascader 级联选择](/components/cascader)
 - [Checkbox 多选框](/components/checkbox)
 - [ColorPicker 颜色选择器](/components/color-picker)
 
 ### 布局组件
+
 - [Flex 弹性布局](/components/flex)
 - [Grid 栅格](/components/grid)
 - [Layout 布局](/components/layout)
@@ -426,7 +490,10 @@ A: 支持所有现代浏览器（Chrome、Firefox、Safari、Edge）。
 - [Splitter 分隔面板](/components/splitter)
 
 ### 其他组件
-- [FloatButton 悬浮按钮](/components/float-button)
+
+- [FloatButton 悜浮按钮](/components/float-button)
+- [Card 卡片](/components/card)
 
 ### 链接
+
 - [GitHub 仓库](https://github.com/goshlu/one-wish)

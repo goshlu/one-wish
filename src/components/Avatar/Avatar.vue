@@ -8,7 +8,7 @@
       :style="imageStyle"
       @error="handleError"
     />
-    <my-icon v-else-if="icon" :icon="icon" class="my-avatar__icon" />
+    <my-icon v-else-if="icon" :name="icon" class="my-avatar__icon" />
     <slot v-else />
   </span>
 </template>

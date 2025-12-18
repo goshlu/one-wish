@@ -8,12 +8,6 @@
 <template>
   <my-float-button icon="↑" tooltip="返回顶部" @click="scrollToTop" />
 </template>
-
-<script setup>
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-}
-</script>
 ```
 
 ## 不同类型
@@ -111,12 +105,6 @@ const scrollToTop = () => {
     <my-float-button icon="🗑️" description="删除" @click="handleDelete" />
   </my-float-button-group>
 </template>
-
-<script setup>
-const handleEdit = () => console.log('编辑')
-const handleSave = () => console.log('保存')
-const handleDelete = () => console.log('删除')
-</script>
 ```
 
 ### 悬停触发
@@ -194,12 +182,6 @@ const handleDelete = () => console.log('删除')
 <template>
   <my-float-button icon="↑" tooltip="返回顶部" @click="scrollToTop" />
 </template>
-
-<script setup>
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-}
-</script>
 ```
 
 ### 客服/帮助
@@ -214,16 +196,6 @@ const scrollToTop = () => {
     @click="openChat"
   />
 </template>
-
-<script setup>
-import { ref } from 'vue'
-
-const unreadCount = ref(3)
-
-const openChat = () => {
-  // 打开客服窗口
-}
-</script>
 ```
 
 ### 快捷操作菜单
@@ -236,12 +208,6 @@ const openChat = () => {
     <my-float-button icon="⚙️" description="设置" @click="handleSettings" />
   </my-float-button-group>
 </template>
-
-<script setup>
-const handleCreate = () => console.log('新建')
-const handleExport = () => console.log('导出')
-const handleSettings = () => console.log('设置')
-</script>
 ```
 
 ## 样式定制
@@ -282,3 +248,24 @@ import type {
   FloatButtonGroupProps,
 } from 'vue3-component-library'
 ```
+
+<script setup>
+import { ref } from 'vue'
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+const handleEdit = () => console.log('编辑')
+const handleSave = () => console.log('保存')
+const handleDelete = () => console.log('删除')
+
+const unreadCount = ref(3)
+const openChat = () => {
+  console.log('打开客服')
+}
+
+const handleCreate = () => console.log('新建')
+const handleExport = () => console.log('导出')
+const handleSettings = () => console.log('设置')
+</script>

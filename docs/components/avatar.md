@@ -12,7 +12,7 @@
     <my-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" shape="square" />
     <my-avatar>U</my-avatar>
     <my-avatar>
-      <my-icon icon="user" />
+      <my-icon name="user" />
     </my-avatar>
   </div>
 
@@ -24,7 +24,7 @@
     <my-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" shape="square" />
     <my-avatar>U</my-avatar>
     <my-avatar>
-      <my-icon icon="user" />
+      <my-icon name="user" />
     </my-avatar>
   </template>
   ```
@@ -41,10 +41,10 @@ Avatar 组件支持三种类型：图片、图标和文字。
     <my-avatar shape="square" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" />
     <my-avatar shape="circle" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" />
     <my-avatar shape="square">
-      <my-icon icon="user" />
+      <my-icon name="user" />
     </my-avatar>
     <my-avatar shape="circle">
-      <my-icon icon="user" />
+      <my-icon name="user" />
     </my-avatar>
   </div>
 
@@ -55,10 +55,10 @@ Avatar 组件支持三种类型：图片、图标和文字。
     <my-avatar shape="square" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" />
     <my-avatar shape="circle" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" />
     <my-avatar shape="square">
-      <my-icon icon="user" />
+      <my-icon name="user" />
     </my-avatar>
     <my-avatar shape="circle">
-      <my-icon icon="user" />
+      <my-icon name="user" />
     </my-avatar>
   </template>
   ```
