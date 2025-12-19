@@ -134,6 +134,12 @@ export default defineConfig({
           ],
         },
         {
+          text: '数据展示',
+          items: [
+            { text: 'Carousel 走马灯', link: '/components/carousel' },
+          ],
+        },
+        {
           text: '其他组件',
           items: [{ text: 'FloatButton 悬浮按钮', link: '/components/float-button' }],
         },

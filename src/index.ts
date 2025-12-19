@@ -6,6 +6,8 @@ import MyBadge from './components/Badge/Badge.vue'
 import MyBreadcrumb from './components/Breadcrumb/Breadcrumb.vue'
 import MyButton from './components/Button/Button.vue'
 import MyCard from './components/Card/Card.vue'
+import MyCarousel from './components/Carousel/Carousel.vue'
+import MyCarouselItem from './components/Carousel/CarouselItem.vue'
 import MyCascader from './components/Cascader/Cascader.vue'
 import MyCheckbox from './components/Checkbox/Checkbox.vue'
 import MyCheckboxGroup from './components/Checkbox/CheckboxGroup.vue'
@@ -54,6 +56,8 @@ export {
   MyBreadcrumb,
   MyButton,
   MyCard,
+  MyCarousel,
+  MyCarouselItem,
   MyCascader,
   MyCheckbox,
   MyCheckboxGroup,
@@ -103,6 +107,8 @@ const components = [
   MyBreadcrumb,
   MyButton,
   MyCard,
+  MyCarousel,
+  MyCarouselItem,
   MyCascader,
   MyCheckbox,
   MyCheckboxGroup,
@@ -164,6 +170,7 @@ export * from './components/Badge/types'
 export * from './components/Breadcrumb/types'
 export * from './components/Button/types'
 export * from './components/Card/types'
+export * from './components/Carousel/types'
 export * from './components/Cascader/types'
 export * from './components/Checkbox/types'
 export * from './components/ColorPicker/types'
